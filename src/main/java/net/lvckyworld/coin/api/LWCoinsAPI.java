@@ -4,6 +4,7 @@ package net.lvckyworld.coin.api;
  * Licensed to Iven Schlenther & Lukas Oetken
  */
 
+import net.lvckyworld.coin.LWCoins;
 import net.lvckyworld.coin.mysql.MySQL;
 import org.bukkit.entity.Player;
 
