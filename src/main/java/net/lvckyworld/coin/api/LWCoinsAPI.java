@@ -91,6 +91,51 @@ public class LWCoinsAPI {
     }
 
     /**
+     * Update the Add Coins to Player
+     * @param p The player to whom the money will be updated so
+     * @param value The money to be wagered on the player
+     */
+    public static void addCoins(Player p, Long value) {
+        long coins = getCoins(p);
+        long newCoins = coins + value;
+        update(p, newCoins);
+    }
+
+    /**
+     * Update the Add Coins to Player
+     * @param playerName The player to whom the money will be updated so
+     * @param value The money to be wagered on the player
+     */
+    public static void addCoinsOffline(String playerName, Long value) {
+        long coins = getOfflinePlayerCoins(playerName);
+        long newCoins = coins + value;
+        updateOffline(playerName, newCoins);
+    }
+
+    /**
+     * Update the Remove Coins to Player
+     * @param p The player to whom the money will be updated so
+     * @param value The money to be wagered on the player
+     */
+    public static void removeCoins(Player p, Long value) {
+        long coins = getCoins(p);
+        long newCoins = coins - value;
+        update(p, newCoins);
+    }
+
+    /**
+     * Update the Remove Coins to Player
+     * @param playername The player to whom the money will be updated so
+     * @param value The money to be wagered on the player
+     */
+    public static void removeCoinsOffline(String playername, Long value) {
+        long coins = getOfflinePlayerCoins(playername);
+        long newCoins = coins - value;
+        updateOffline(playername, newCoins);
+    }
+
+
+    /**
      * Get the Coins of the Player
      * @param p The player from whom the account Coins is to be checked
      * @return Account Coins of p (Player)
