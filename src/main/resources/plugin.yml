@@ -3,3 +3,5 @@ main: net.lvckyworld.coin.LWCoins
 version: 1.0
 author: IloveKOHL (Lukas)
 commands:
+  coins:
+    description: Coins

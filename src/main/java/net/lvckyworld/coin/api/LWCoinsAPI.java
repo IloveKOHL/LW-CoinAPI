@@ -5,7 +5,6 @@ package net.lvckyworld.coin.api;
  */
 
 import net.lvckyworld.coin.mysql.MySQL;
-import net.lvckyworld.coin.utils.MySQLHandler;
 import org.bukkit.entity.Player;
 
 import java.sql.PreparedStatement;
@@ -46,6 +45,19 @@ public class LWCoinsAPI {
             throwables.printStackTrace();
         }
         return false;
+    }
+
+
+    public static void firstConnect(Player p, Long value) {
+        try {
+            PreparedStatement ps = MySQL.getConnection().prepareStatement("INSERT INTO Coins (UUID,Spielername,Coins) VALUE (?,?,?)");
+            ps.setString(1, p.getUniqueId().toString());
+            ps.setString(2, p.getName());
+            ps.setLong(3, value);
+            ps.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 
     /**
