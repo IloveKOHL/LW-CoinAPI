@@ -36,6 +36,7 @@ public class Coins implements CommandExecutor {
                 p.sendMessage(LWCoins.prefix + "§4Dazu fehlt dir die Permission: " + "lwc.seeother");
             }
 
+
         } else if (args.length == 3) {
             // /coins <set | add | remove> <Player> <Amount>
             if (p.hasPermission("lwc.admin")) {
