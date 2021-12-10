@@ -23,7 +23,7 @@ public class Coins implements CommandExecutor {
             p.sendMessage(LWCoins.prefix + "§7Du hast §6" + coins + "§7 Coins.");
         } else if (args.length == 1) {
             // /coins <Player>
-            if (p.hasPermission("lwc.seeother")) {
+            if (p.hasPermission("lwc.seeother") || p.hasPermission("lwc.admin")) {
                 Player target = Bukkit.getPlayer(args[0]);
                 if (target != null) {
                     Long coins = LWCoinsAPI.getCoins(target);
