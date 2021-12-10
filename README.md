@@ -5,6 +5,7 @@ funktionalität.
 Es beinhaltet eine vielfältige API, die unten näher erklärt wird.
 Fast alles ist in der ```config.yml``` einstellbar.
 Die MySQL verbindung erfolgt nach den einstellen der ```mysql.yml```.
+Java-Docs: https://docs.lvckyworld.net/coinapi/
 
 ## Spieler-Befehle
 
