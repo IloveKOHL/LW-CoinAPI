@@ -1,18 +1,19 @@
 # LW-CoinAPI
 
-Das LW-CoinAPI Plugin ist für Minecraft Spigot ausgelegt und bietet eine Große
-funktionalität.
-Es beinhaltet eine vielfältige API, die unten näher erklärt wird.
-Fast alles ist in der ```config.yml``` einstellbar.
-Die MySQL verbindung erfolgt nach den einstellen der ```mysql.yml```.
-Java-Docs: https://docs.lvckyworld.net/coinapi/
+Das LW-CoinAPI Plugin ist für Minecraft Spigot ausgelegt und bietet eine große Funktionalität. 
+Es ist funktionstüchtig ab der Version 1.8 bis Version 1.17.
+Das Plugin beinhaltet eine vielfältige API, die unten näher erklärt wird.
+So gut wie alles ist in der ```config.yml``` konfigurierbar.
+Die MySQL-Verbindung erfolgt nach dem korrekten Einstellen der ```mysql.yml```.
+
+[![JavaDocs](https://img.shields.io/badge/-Java%20Docs-8CA1AF.svg?logo=read-the-docs&logoColor=white&longCache=true&style=for-the-badge)](https://docs.lvckyworld.net/coinapi/)
 
 ## Spieler-Befehle
 
-```
-Command                                   | Permission              | Funktion
+```md
+Command                                         | Permission              | Funktion
 
-/coins                                    | -------------           | Zeigt dir deinen aktuellen Coins
+/coins                                          | -------------           | Zeigt dir deinen aktuellen Coins
 ```
 
 
@@ -22,14 +23,14 @@ Command                                   | Permission              | Funktion
 Command                                         | Permission              | Funktion
 
 /coins <player>                                 | lwc.seeother            | Zeigt dir die Coins eines anderen Spielers
-/coins <set | add | remove> <Player> <Amount>   | lwc.admin               | Setzt / Gibt / Nimmt einen Spieler seine Coins
+/coins <set | add | remove> <Player> <Amount>   | lwc.admin               | Setzt / Gibt / Nimmt einem Spieler seine Coins
 ```
 
 
 ## Konfigurationshilfe
 
 ### config.yml
-```
+```yaml
 // Prefix
 // FirstJoinCoins, heißt wie viele Coins soll ein Spieler erhalten wenn er zum ersten mal Join min. 1
 
@@ -40,7 +41,7 @@ FirstJoinCoins: 10
 
 ### MySQL.yml
 
-```
+```yaml
 // use MUSS auf true gestzt werden
 
 mysql:
