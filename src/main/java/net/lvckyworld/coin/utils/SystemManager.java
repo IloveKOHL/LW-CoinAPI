@@ -26,7 +26,7 @@ public class SystemManager {
     private static String PASSWORD;
 
 
-    private static String prefix;
+    private static String prefix = LWCoins.prefix;
 
     private static final String debugPrefix =  prefix + "§b[Debug] §4";
 

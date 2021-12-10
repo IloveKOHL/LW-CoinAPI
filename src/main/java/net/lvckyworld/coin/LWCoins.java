@@ -21,8 +21,9 @@ public class LWCoins extends JavaPlugin {
     @Override
     public void onEnable() {
         plugin = this;
-        SystemManager.startUp();
+
         loadConfig();
+        SystemManager.startUp();
 
     }
 
@@ -30,7 +31,6 @@ public class LWCoins extends JavaPlugin {
 
     public void loadConfig() {
         if (!Config.configFile.exists()) {
-            Config.configFile.mkdir();
             Config.config.set("Prefix", "&8[&5LW&8-&3Coins&8]");
             try {
                 Config.save();
@@ -39,6 +39,6 @@ public class LWCoins extends JavaPlugin {
             }
         }
 
-        prefix = Config.config.getString("Prefix");
+        prefix = Config.config.getString("Prefix").replaceAll("&", "§") + "§r ";
     }
 }
